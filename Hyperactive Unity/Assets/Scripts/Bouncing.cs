@@ -28,8 +28,10 @@ public class Bouncing : MonoBehaviour
         //maintain speed
         Vector3 unscaledVel = rb.velocity;
         float hypotenuse = Mathf.Sqrt((unscaledVel.x * unscaledVel.x) + (unscaledVel.y * unscaledVel.y));  //getting hypotenuse of the vector for math reasons
-        float newX = (unscaledVel.x / hypotenuse) * speed;
-        float newY = (unscaledVel.y / hypotenuse) * speed;             //doing it this way rather than arcsin/arccos/arctan keeps the sign without any caviots
-        rb.velocity = new Vector3(newX, newY, 0);
+        if (hypotenuse != 0) {                                             //hypotenuse being 0 will cause a divide by zero error
+            float newX = (unscaledVel.x / hypotenuse) * speed;
+            float newY = (unscaledVel.y / hypotenuse) * speed;             //doing it this way rather than arcsin/arccos/arctan keeps the sign without any caviots
+            rb.velocity = new Vector3(newX, newY, 0);
+        }
     }
 }
