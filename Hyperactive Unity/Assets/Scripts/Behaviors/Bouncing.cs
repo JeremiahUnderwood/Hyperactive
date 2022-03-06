@@ -2,7 +2,7 @@
  * 
  * Created By Jeremiah Underwood
  * 
- * Last Edited:
+ * Last Edited: 3/6/2022
  * Last Edited by:
  * 
  * Descritpion: Makes Attached Object Move and Bounce consistantly
@@ -16,7 +16,9 @@ public class Bouncing : MonoBehaviour
 {
 
     [SerializeField] private Rigidbody rb;    //reference to rigidbody component
+    [SerializeField] private Light halo;
     public float speed;      //easily editable speed accessable by other objects
+    [SerializeField] GameObject bleh;
 
     void Start()
     {
@@ -33,5 +35,13 @@ public class Bouncing : MonoBehaviour
             float newY = (unscaledVel.y / hypotenuse) * speed;             //doing it this way rather than arcsin/arccos/arctan keeps the sign without any caviots
             rb.velocity = new Vector3(newX, newY, 0);
         }
+    }
+
+    public void ChangeColor()
+    {
+        int speedIndex = (int)((speed - 10) / 2);         //set color based on speed for convinience sake
+        halo.color = GameManager.speedColors[speedIndex];
+        halo.range = (15f + speedIndex) / 10;             //set size and intensity of color for increased intensity
+        halo.intensity = (10 + 2 * speedIndex)/10;
     }
 }

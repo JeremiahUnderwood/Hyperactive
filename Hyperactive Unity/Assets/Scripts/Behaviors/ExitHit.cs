@@ -1,3 +1,13 @@
+/**
+ * 
+ * Created By Jeremiah Underwood
+ * 
+ * Last Edited:
+ * Last Edited by:
+ * 
+ * Descritpion: Changes Level When Hit
+ * 
+ * */
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
