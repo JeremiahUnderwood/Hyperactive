@@ -219,7 +219,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 19.491, y: -29.419, z: 22.956}
 --- !u!1 &963194225
 GameObject:
@@ -340,7 +340,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 670127944122200737, guid: 66be1a1aca8cc0945bb0be0e3c76fe6e, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 670127944122200737, guid: 66be1a1aca8cc0945bb0be0e3c76fe6e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -437,13 +437,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37b28f5248ec7ee4a999114e1e0d925c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  colorList:
-  - {r: 1, g: 1, b: 1, a: 1}
-  - {r: 1, g: 0.89338535, b: 0, a: 1}
-  - {r: 0, g: 0.6969085, b: 1, a: 1}
-  - {r: 1, g: 0.1336182, b: 0, a: 1}
-  - {r: 0.13512897, g: 0, b: 1, a: 1}
-  - {r: 1, g: 0, b: 0.86989164, a: 1}
+  startScene: 
+  completionScene: 
+  levels: []
 --- !u!4 &1376950481
 Transform:
   m_ObjectHideFlags: 0

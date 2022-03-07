@@ -360,7 +360,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   threshHold: 10
   piece: {fileID: 543290094249087445, guid: c9cde695de5516140bd95269b6b167fc, type: 3}
-  forceScale: 125
+  forceScale: 400
   canvas: {fileID: 1833591117}
   text: {fileID: 1910891087}
   halo: {fileID: 423592916}

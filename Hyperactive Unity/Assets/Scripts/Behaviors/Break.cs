@@ -33,6 +33,7 @@ public class Break : MonoBehaviour
 
         int speedIndex = (int)((threshHold - 10) / 2);         //set color based on threshhold for convinience sake
         halo.color = GameManager.speedColors[speedIndex];
+        text.color = GameManager.speedColors[speedIndex];
         text.text = speedIndex.ToString();
     }
 
