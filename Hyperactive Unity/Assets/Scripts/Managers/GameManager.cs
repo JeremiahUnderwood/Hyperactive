@@ -66,4 +66,17 @@ public class GameManager : MonoBehaviour
             SceneManager.LoadScene(levels[levelCount]);
         }
     }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            ExitGame();
+        }
+    }
+
+    private void Awake()
+    {
+        CheckForManager();
+    }
 }

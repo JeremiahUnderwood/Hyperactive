@@ -14,10 +14,13 @@ using UnityEngine;
 
 public class ExitHit : MonoBehaviour
 {
+    [SerializeField] private bool finalLevel = false;
     private bool jimmyIn;
+    private GameManager manager;
     void Start()
     {
         jimmyIn = false;
+        manager = GameObject.Find("GameManager").GetComponent<GameManager>();
     }
 
     private void OnTriggerEnter(Collider other)
@@ -29,7 +32,8 @@ public class ExitHit : MonoBehaviour
         }
         if ((other.gameObject.tag == "Jacky") && jimmyIn)
         {
-            Debug.Log("Level Beat");
+            if (finalLevel) manager.FinishGame();
+            else manager.NextLevel();
         }
     }
 }
